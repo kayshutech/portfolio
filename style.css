@@ -539,4 +539,8 @@ p {
   .circular-skills {
     gap: 20px;
   }
+  /* Fix overlapping circular skills text */
+  .circle {
+    margin-bottom: 50px;
+  }
 }
