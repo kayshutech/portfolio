@@ -446,3 +446,97 @@ p {
 .contact-form .btn:hover {
   background-color: #00cce7;
 }
+/* =========================================
+   MOBILE RESPONSIVENESS (Screens under 768px)
+   ========================================= */
+
+@media (max-width: 768px) {
+  /* 1. Fix Header and Navigation */
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding-top: 10px;
+  }
+  nav ul li {
+    margin-left: 0;
+  }
+
+  /* 2. Fix Intro and About Sections (Stack vertically) */
+  .intro, .about {
+    flex-direction: column;
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .about {
+    flex-direction: column-reverse; /* Puts the text above the image on mobile */
+  }
+
+  /* 3. Resize Fonts and Images */
+  .intro-text h1, .about-text h2, .services h2, .projects-section h2 {
+    font-size: 32px;
+  }
+  
+  .intro-image, .about-image {
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+
+  .intro-image img, .about-image img {
+    width: 100%;
+    max-width: 250px; /* Prevents image from breaking the screen width */
+    height: auto;
+  }
+
+  /* 4. Fix Services Box Widths */
+  .services {
+    padding: 50px 20px;
+  }
+  .service-box {
+    width: 100%;
+    max-width: 320px;
+    margin: 15px auto;
+  }
+
+  /* 5. Fix Projects Section (Stack cards vertically) */
+  .projects-section {
+    width: 90%;
+    margin-top: 100px;
+  }
+  .projects-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .project-card {
+    width: 100%;
+    max-width: 350px;
+    margin-bottom: 20px;
+  }
+
+  /* 6. Fix Contact Section */
+  .contact {
+    padding: 50px 20px;
+  }
+  .contact-content {
+    flex-direction: column;
+  }
+  .contact-info, .contact-form {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+  .contact-info {
+    margin-bottom: 40px;
+  }
+  .social-links {
+    justify-content: center;
+    display: flex;
+    margin-top: 15px;
+  }
+  
+  /* Adjust Circular Skills spacing */
+  .circular-skills {
+    gap: 20px;
+  }
+}
